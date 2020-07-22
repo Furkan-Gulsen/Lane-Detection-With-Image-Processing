@@ -4,10 +4,8 @@ import cv2
 
 class Lane:
 	def __init__(self,x1,y1,x2,y2):
-		"""
-		Here, setted up the coordinates of the two different points of the lane.
-		(x1,y1) (x2,y2)
-		"""
+		# Here, setted up the coordinates of the two different points of the lane.
+		# (x1,y1) (x2,y2)
 		self.x1 = np.float32(x1)
 		self.y1 = np.float32(y1)
 		self.x2 = np.float32(x2)
@@ -36,5 +34,3 @@ class Lane:
 
 	def draw(self, img, color=[255, 0, 0], thickness=8):
 		cv2.line(img, (self.x1, self.y1), (self.x2, self.y2), color, thickness)
-
-	
